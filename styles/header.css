@@ -1,0 +1,257 @@
+header.page-header {
+    width: 100%;
+    max-width: 1380px;
+    background-color: var(--surface);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 7px 15px;
+
+    align-items: center;
+}
+
+nav.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 470px;
+
+    .menu-item {
+        position: relative;
+        font-size: 14px;
+        font-family: var(--primary-font);
+        font-weight: 500;
+        color: var(--font-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::after {
+            position: absolute;
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            color: black;
+            transition-duration: .2s;
+            transform: scale(1.7);
+            opacity: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            &::after {
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+    }
+
+    .menu-item:nth-child(1)::after {
+        content: 'Виза и ВНЖ';
+    }
+    .menu-item:nth-child(2)::after {
+        content: 'Услуги';
+    }
+    .menu-item:nth-child(3)::after {
+        content: 'Журнал';
+    }
+    .menu-item:nth-child(4)::after {
+        content: 'Отзывы';
+    }
+    .menu-item:nth-child(5)::after {
+        content: 'Контакты';
+    }
+}
+
+.burger-button {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .2s;
+
+    .burger {
+        width: 30px;
+        &,
+        &::before,
+        &::after {
+            opacity: 1;
+            position: absolute;
+            content: '';
+            height: 3px;
+            background-color: var(--font-color);
+            border-radius: 2px;
+            transition-duration: .2s;
+        }
+
+        &::before {
+            width: 15px;
+            top: -10px
+        }
+
+        &::after {
+            width: 25px;
+            top: 10px
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.burger-button.open {
+    .burger {
+        transform: rotate(45deg);
+
+        &::before {
+            width: 30px;
+            top: 0;
+        }
+
+        &::after {
+            width: 30px;
+            top: 0;
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+.phone-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    width: fit-content;
+    margin-left: 10%;
+
+    img {
+        width: 16px;
+        height: 16px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .phone-number {
+        font-size: 14px;
+        font-family: var(--primary-font);
+        font-weight: 500;
+        color: var(--font-color);
+    }
+}
+
+.socials-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    align-items: center;
+
+    gap: 10px;
+    padding: 0 10px;
+    width: fit-content;
+    /*margin-left: 10px;*/
+
+    img {
+        width: 40px;
+        height: 40px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media(max-width: 1280px) {
+    .socials-wrapper {
+        display: none;
+    }
+}
+
+.header-button {
+    padding: 10px 30px;
+    border-radius: 100px;
+    background-color: var(--main-color);
+
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--primary-font);
+    color: var(--on-main-color);
+
+    outline: none;
+    border: none;
+
+    transition-duration: .3s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 1160px) {
+    .logo {
+        order: 1;
+    }
+    nav.menu {
+        position: absolute;
+        flex-direction: column;
+        opacity: 1;
+
+        width: 200px;
+        height: 0px;
+        top: 80px;
+        left: calc(100% - 230px);
+        background-color: var(--surface);
+        border-radius: 12px;
+        transition-duration: .3s;
+
+        .menu-item {
+            opacity: 0;
+            display: none;
+        }
+    }
+    nav.menu.open {
+        height: 300px;
+        .menu-item {
+            opacity: 1;
+            display: flex;
+        }
+    }
+    .phone-wrapper {
+        margin-left: 30%;
+        order: 2;
+    }
+    .header-button {
+        order: 3;
+    }
+    .burger-button {
+        display: flex;
+        order: 4;
+    }
+}
+
+@media (max-width: 850px) {
+    .phone-wrapper {
+        display: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+}
+
+@media (max-width: 550px) {
+    .header-button {
+        display: none;
+    }
+}

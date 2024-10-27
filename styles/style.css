@@ -1,0 +1,50 @@
+@import "../fonts/Atyp/stylesheet.css";
+
+:root {
+    /* Fonts */
+    --primary-font: Atyp Text, sans serif;
+
+    /* Light colors */
+    --background-light: #F7F7F7;
+    --surface-light: #FFFFFF;
+    --font-color-light: #4C4C4C;
+    --main-color-light: #EF5734;
+    --on-main-color-light: #FFFFFF;
+
+
+    /* Colors */
+    --background: var(--background-light);
+    --surface: var(--surface-light);
+    --font-color: var(--font-color-light);
+    --main-color: var(--main-color-light);
+    --on-main-color: var(--on-main-color-light);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+a:hover,
+button:hover {
+    cursor: pointer;
+}
+
+body {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    padding-left: clamp(3px, 3vw, 30px);
+    padding-right: clamp(3px, 3vw, 30px);
+    align-items: center;
+
+    background-color: var(--background);
+}
