@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Онлайн журнал о жизни и иммиграции в Испанию</title>
 
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="styles/main_page.css">
 </head>
 
@@ -16,9 +17,9 @@
         </a>
 
         <nav class="menu">
-            <a href="#" class="menu-item">Виза и ВНЖ</a>
+            <a href="#services" class="menu-item">Виза и ВНЖ</a>
             <a href="#" class="menu-item">Услуги</a>
-            <a href="#" class="menu-item">Журнал</a>
+            <a href="#journal" class="menu-item">Журнал</a>
             <a href="#" class="menu-item">Отзывы</a>
             <a href="#" class="menu-item">Контакты</a>
         </nav>
@@ -63,7 +64,7 @@
         </ul>
     </div>
 
-    <section class="journal">
+    <section class="journal" id="journal">
         <div class="journal-card new">
             <img src="img/journal-image1.png" alt="journal_image" class="journal-image">
             <div class="journal-date">25.04.2024</div>
@@ -132,7 +133,23 @@
         </div>
     </section>
 
+    <section class="chances" id="services">
+        <div class="chances-content">
+            <h3 class="chances-heading">
+                Поможем переехать в&nbsp;Испанию без стресса и&nbsp;ошибок за&nbsp;45&nbsp;дней
+            </h3>
+            <p class="chances-text">Подберем лучший ВНЖ или визу под ваши цели и&nbsp;ситуацию</p>
+            <button class="chances-button">
+                Оценить шансы
+            </button>
+        </div>
+        <img src="img/stock-image.png" alt="stock" class="chances-photo">
+    </section>
+
+    <button class="scroll-top-button" id="scroll-top-button"></button>
+
     <script src="scripts/burger.js"></script>
+    <script src="scripts/scroll-top.js"></script>
     <script src="scripts/main_page.js"></script>
 </body>
 

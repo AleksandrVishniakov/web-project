@@ -1,0 +1,44 @@
+.scroll-top-button {
+    z-index: 100;
+    position: fixed;
+    right: 5vw;
+    bottom: 5vh;
+    transition-duration: .3s;
+
+    border: none;
+    outline: none;
+
+    border-radius: 50%;
+
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--surface);
+
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 25px 0px rgba(34, 60, 80, 0.2);
+}
+
+.scroll-top-button:before, 
+.scroll-top-button:after {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background-color: var(--font-color);
+    z-index: 200;
+    border-radius: 5px;
+}
+
+.scroll-top-button:before {
+    transform: rotate(-50deg);
+}
+
+.scroll-top-button:after {
+    transform: rotate(50deg);
+    margin-left: -8px;
+}
