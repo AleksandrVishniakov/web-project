@@ -11,6 +11,10 @@
     --main-color-light: #EF5734;
     --on-main-color-light: #FFFFFF;
 
+    --journal-label-color-light: #B3B3B3;
+    --journal-heading-color-light: #058E96;
+    --journal-text-color-light: #727272;
+
 
     /* Colors */
     --background: var(--background-light);
@@ -18,6 +22,9 @@
     --font-color: var(--font-color-light);
     --main-color: var(--main-color-light);
     --on-main-color: var(--on-main-color-light);
+    --journal-label-color: var(--journal-label-color-light);
+    --journal-heading-color: var(--journal-heading-color-light);
+    --journal-text-color: var(--journal-text-color-light);
 }
 
 * {
@@ -47,4 +54,8 @@ body {
     align-items: center;
 
     background-color: var(--background);
+}
+
+.main-color {
+    color: var(--main-color);
 }
