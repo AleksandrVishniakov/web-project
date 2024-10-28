@@ -255,3 +255,26 @@ nav.menu {
         display: none;
     }
 }
+
+.location {
+    font-family: var(--primary-font);
+    font-size: 18px;
+    color: var(--font-color);
+    width: 100%;
+    max-width: 1380px;
+    margin-top: 54px;
+}
+
+@media (max-width: 900px) {
+    .location {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .location {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+}
